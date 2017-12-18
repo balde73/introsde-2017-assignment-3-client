@@ -1,0 +1,415 @@
+
+
+
+## Method 0 ## Creating 3 new random person and activities if database is empty
+
+
+
+
+## Method 1 ## List all people in database
+
+People (#3)
+
+	 Person
+	 id:                 1
+	 firstname:          marina
+	 lastname:           laono
+	 username:           le_marina533
+	 birthday:           1993-09-04Z
+	 email:              laonomarina@mail.com
+	 activities:
+
+		 Activity
+		 id:                 5027
+		 name:               activity name #961
+		 description:        activity description #961
+		 place:              Paris
+		 rate:               0
+		 startdate:          2017-12-25T21:36:48Z
+		 activityType        Sport
+
+
+	 Person
+	 id:                 2
+	 firstname:          marini
+	 lastname:           liaro
+	 username:           le_marini224
+	 birthday:           1993-09-18Z
+	 email:              liaromarini@mail.com
+	 activities:
+
+		 Activity
+		 id:                 5028
+		 name:               activity name #920
+		 description:        activity description #920
+		 place:              Paris
+		 rate:               0
+		 startdate:          2017-09-06T20:36:48Z
+		 activityType        Education
+
+		 Activity
+		 id:                 5029
+		 name:               activity name #165
+		 description:        activity description #165
+		 place:              Milan
+		 rate:               0
+		 startdate:          2017-07-31T20:36:48Z
+		 activityType        Sport
+
+
+	 Person
+	 id:                 3
+	 firstname:          larro
+	 lastname:           gianlo
+	 username:           le_larro538
+	 birthday:           1993-02-03Z
+	 email:              gianlolarro@mail.com
+	 activities:
+
+		 Activity
+		 id:                 5030
+		 name:               activity name #630
+		 description:        activity description #630
+		 place:              Rome
+		 rate:               0
+		 startdate:          2017-06-14T20:36:48Z
+		 activityType        Sport
+
+
+
+
+## Method 2 ## Read person with id -> readPerson(1)
+
+
+	 Person
+	 id:                 1
+	 firstname:          marina
+	 lastname:           laono
+	 username:           le_marina533
+	 birthday:           1993-09-04Z
+	 email:              laonomarina@mail.com
+	 activities:
+
+		 Activity
+		 id:                 5027
+		 name:               activity name #961
+		 description:        activity description #961
+		 place:              Paris
+		 rate:               0
+		 startdate:          2017-12-25T21:36:48Z
+		 activityType        Sport
+
+
+
+
+## Method 3 ## Changing firstname with rnd_34 -> updatePerson(introsde.assignment3.soap.Person@25d3cfc8)
+
+
+	 Person
+	 id:                 1
+	 firstname:          rnd_34
+	 lastname:           laono
+	 username:           le_marina533
+	 birthday:           1993-09-04Z
+	 email:              laonomarina@mail.com
+	 activities:
+
+		 Activity
+		 id:                 5027
+		 name:               activity name #961
+		 description:        activity description #961
+		 place:              Paris
+		 rate:               0
+		 startdate:          2017-12-25T21:36:48Z
+		 activityType        Sport
+
+
+Checking if update was good. -> readPerson(1)
+
+
+	 Person
+	 id:                 1
+	 firstname:          rnd_34
+	 lastname:           laono
+	 username:           le_marina533
+	 birthday:           1993-09-04Z
+	 email:              laonomarina@mail.com
+	 activities:
+
+		 Activity
+		 id:                 5027
+		 name:               activity name #961
+		 description:        activity description #961
+		 place:              Paris
+		 rate:               0
+		 startdate:          2017-12-25T21:36:48Z
+		 activityType        Sport
+
+
+
+
+## Method 4 ## Create new person -> createPerson
+
+
+	 Person
+	 id:                 4
+	 firstname:          farno
+	 lastname:           farilo
+	 username:           le_farno866
+	 birthday:           1993-07-17Z
+	 email:              farilofarno@mail.com
+	 activities:
+
+
+Checking if update was good: -> readPerson(4)
+
+
+	 Person
+	 id:                 4
+	 firstname:          farno
+	 lastname:           farilo
+	 username:           le_farno866
+	 birthday:           1993-07-17Z
+	 email:              farilofarno@mail.com
+	 activities:
+
+
+
+
+## Method 5 ## Delete person created -> deletePerson(4)
+
+response: true
+
+Checking if update was good: -> readPerson(4)
+
+	 Person is null
+
+
+
+## Method 6 ## Read all activity with activity_type='Sport' for Person id:1 -> readPersonPreferences(1, "Sport")
+
+	 activities:
+
+		 Activity
+		 id:                 5027
+		 name:               activity name #961
+		 description:        activity description #961
+		 place:              Paris
+		 rate:               0
+		 startdate:          2017-12-25T21:36:48Z
+		 activityType        Sport
+
+
+
+## Method 7 ## Read ALL Persons preferences -> readPreferences()
+
+	 activities:
+
+		 Activity
+		 id:                 5027
+		 name:               activity name #961
+		 description:        activity description #961
+		 place:              Paris
+		 rate:               0
+		 startdate:          2017-12-25T21:36:48Z
+		 activityType        Sport
+
+		 Activity
+		 id:                 5028
+		 name:               activity name #920
+		 description:        activity description #920
+		 place:              Paris
+		 rate:               0
+		 startdate:          2017-09-06T20:36:48Z
+		 activityType        Education
+
+		 Activity
+		 id:                 5029
+		 name:               activity name #165
+		 description:        activity description #165
+		 place:              Milan
+		 rate:               0
+		 startdate:          2017-07-31T20:36:48Z
+		 activityType        Sport
+
+		 Activity
+		 id:                 5030
+		 name:               activity name #630
+		 description:        activity description #630
+		 place:              Rome
+		 rate:               0
+		 startdate:          2017-06-14T20:36:48Z
+		 activityType        Sport
+
+
+
+## Method 9 ## Create new activity with activity_type='Sport' for Person id:1 -> savePersonPreference(1, Activity)
+
+
+		 Activity
+		 id:                 5031
+		 name:               activity name #934
+		 description:        activity description #934
+		 place:              New York
+		 rate:               0
+		 startdate:          2017-05-27T20:36:50Z
+		 activityType        Sport
+
+
+
+## Method 8 ## Read Person preference created -> readPersonPreference(1, 5031)
+
+
+		 Activity
+		 id:                 5031
+		 name:               activity name #934
+		 description:        activity description #934
+		 place:              New York
+		 rate:               0
+		 startdate:          2017-05-27T20:36:50Z
+		 activityType        Sport
+
+
+
+## Method 10 ## Update Person preference created with name "rnd_42" -> updatePersonPreferences(1, Activity)
+
+
+		 Activity
+		 id:                 5031
+		 name:               rnd_42
+		 description:        activity description #934
+		 place:              New York
+		 rate:               0
+		 startdate:          2017-05-27T20:36:50Z
+		 activityType        Sport
+
+
+
+## Method 11 ## Evaluate Person preference created with rate 3 -> evalutatePersonPreferences(1, Activity, 3)
+
+
+		 Activity
+		 id:                 5031
+		 name:               rnd_42
+		 description:        activity description #934
+		 place:              New York
+		 rate:               3
+		 startdate:          2017-05-27T20:36:50Z
+		 activityType        Sport
+
+Read person preference id:5031 to evalutate #10 and #11 step. Looking for changes
+
+
+		 Activity
+		 id:                 5031
+		 name:               rnd_42
+		 description:        activity description #934
+		 place:              New York
+		 rate:               3
+		 startdate:          2017-05-27T20:36:50Z
+		 activityType        Sport
+
+
+
+## Method 12 ## Get best preference of person -> getBestPersonPreference(1)
+
+	 activities:
+
+		 Activity
+		 id:                 5031
+		 name:               rnd_42
+		 description:        activity description #934
+		 place:              New York
+		 rate:               3
+		 startdate:          2017-05-27T20:36:50Z
+		 activityType        Sport
+
+		 Activity
+		 id:                 5027
+		 name:               activity name #961
+		 description:        activity description #961
+		 place:              Paris
+		 rate:               0
+		 startdate:          2017-12-25T21:36:48Z
+		 activityType        Sport
+
+
+
+## Method 1 ## List all people in database again to evaluate every step made
+
+People (#3)
+
+	 Person
+	 id:                 1
+	 firstname:          rnd_34
+	 lastname:           laono
+	 username:           le_marina533
+	 birthday:           1993-09-04Z
+	 email:              laonomarina@mail.com
+	 activities:
+
+		 Activity
+		 id:                 5031
+		 name:               rnd_42
+		 description:        activity description #934
+		 place:              New York
+		 rate:               3
+		 startdate:          2017-05-27T20:36:50Z
+		 activityType        Sport
+
+		 Activity
+		 id:                 5027
+		 name:               activity name #961
+		 description:        activity description #961
+		 place:              Paris
+		 rate:               0
+		 startdate:          2017-12-25T21:36:48Z
+		 activityType        Sport
+
+
+	 Person
+	 id:                 2
+	 firstname:          marini
+	 lastname:           liaro
+	 username:           le_marini224
+	 birthday:           1993-09-18Z
+	 email:              liaromarini@mail.com
+	 activities:
+
+		 Activity
+		 id:                 5028
+		 name:               activity name #920
+		 description:        activity description #920
+		 place:              Paris
+		 rate:               0
+		 startdate:          2017-09-06T20:36:48Z
+		 activityType        Education
+
+		 Activity
+		 id:                 5029
+		 name:               activity name #165
+		 description:        activity description #165
+		 place:              Milan
+		 rate:               0
+		 startdate:          2017-07-31T20:36:48Z
+		 activityType        Sport
+
+
+	 Person
+	 id:                 3
+	 firstname:          larro
+	 lastname:           gianlo
+	 username:           le_larro538
+	 birthday:           1993-02-03Z
+	 email:              gianlolarro@mail.com
+	 activities:
+
+		 Activity
+		 id:                 5030
+		 name:               activity name #630
+		 description:        activity description #630
+		 place:              Rome
+		 rate:               0
+		 startdate:          2017-06-14T20:36:48Z
+		 activityType        Sport
+
