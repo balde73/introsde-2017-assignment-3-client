@@ -2,6 +2,9 @@
 
 Federico Baldessari | federico.baldessari@studenti.unitn.it
 
+[Heroku Link](https://introsde-3.herokuapp.com/people)
+[Github Client](https://github.com/balde73/introsde-2017-assignment-3-server)
+
 ## Project 
 The Client is divided in 3 packages:
 - `introsde.assignment3.client`: the Client that performs all the requests and evaluation
